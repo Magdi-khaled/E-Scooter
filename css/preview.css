@@ -1,0 +1,199 @@
+@import './main.css';
+
+.display-1 {
+    font-size: 6.5rem !important;
+}
+.preview.row{
+    margin: 0;
+}
+/* Text Preview */
+.preview .pre-txt {
+    padding-top: 3rem;
+    color: var(--color-1);
+}
+.preview .pre-txt>p {
+    position: relative;
+    padding-bottom: 2rem;
+}
+
+.preview .pre-txt>p::before {
+    content: '';
+    position: absolute;
+    background-color: var(--color-1);
+    border-radius: 15px;
+    width: 350px;
+    height: 5px;
+    bottom: 0;
+}
+
+.preview .row {
+    height: 100%;
+}
+
+.preview .pre-txt .buy-now {
+    width: 85%;
+    color: var(--color-1);
+    padding-top: 50px;
+}
+
+.preview .pre-txt .buy-now .bn-txt {
+    margin-left: 25px;
+}
+
+.preview .pre-txt .buy-now button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 20px;
+    background-color: var(--color-1);
+    color: #fff;
+}
+
+.preview .pre-txt .buy-now button:hover {
+    background-color: var(--color-4);
+    transition: all 0.3s ease-in-out;
+}
+
+.preview .pre-txt .buy-now button::before {
+    font-family: "Font AweSome 5 Free";
+    font-weight: 900;
+    content: '\f30b';
+}
+
+.preview .pre-txt .buy-now img:hover {
+    cursor: pointer;
+    transform: scale(1, 1) rotate(-17deg);
+    transition: all .4s ease-in-out;
+}
+
+/* Preview Image of Product */
+.preview .pre-img {
+    height: 100%;
+}
+
+.preview .pre-img .product-img {
+    position: relative;
+}
+
+.preview .pre-img .product-img::before {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    background-color: var(--color-4);
+    width: 57%;
+    height: 75%;
+    z-index: -1;
+    bottom: 2%;
+    right: 1%;
+}
+
+.preview .pre-img .product-img img {
+    padding-top: 3rem;
+    height: 40rem;
+}
+
+.preview .pre-img .controls {
+    position: relative;
+    top: 5%;
+    width: 60px;
+    height: 60px;
+    left: 80%;
+}
+
+.preview .pre-img .carousel-control-prev {
+    position: absolute;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 0% !important;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    position: relative;
+    border: 1px #000 solid;
+    padding: 20px 30px;
+}
+
+.carousel-control-prev-icon {
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+.carousel-control-prev-icon::before,
+.carousel-control-next-icon::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: #000;
+    position: absolute;
+    top: 25%;
+    left: 40%;
+    font-size: .9rem;
+}
+
+.carousel-control-prev-icon::before {
+    content: '\f053';
+}
+
+.carousel-control-next-icon {
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.carousel-control-next-icon::before {
+    content: '\f054';
+}
+
+.preview .pre-img .controls+h1 {
+    position: absolute;
+    width: 20%;
+    text-align: center;
+    font-weight: bold;
+    right: 25%;
+    bottom: -8%;
+    color: var(--color-1);
+    font-family: cursive;
+}
+
+/* Media Part */
+@media screen and (max-width : 420px) {
+    .preview .pre-img .controls+h1 {
+        font-size: 6rem !important;
+        left: 38%;
+    }
+    .preview .pre-img .controls {
+        left: 77%;
+    }
+}
+@media screen and (max-width : 582px) {
+    .preview .pre-txt .display-1 {
+        font-size: 3rem !important;
+    }
+
+    .preview .pre-txt .buy-now {
+        width: 100%;
+    }
+
+    .preview .pre-img .product-img img {
+        height: 30rem !important;
+    }
+}
+@media screen and (max-width : 620px) {
+    .preview .pre-txt .text-nowrap {
+        white-space: normal !important;
+    }
+    .preview .pre-txt>p::before {
+        width: 220px;
+    }
+}
+@media screen and (max-width : 1220px) {
+    .preview.col-lg-5 {
+        width: 100%;
+    }
+}
+@media screen and (min-width:990px) and (max-width : 1085px){
+    .preview .pre-img .product-img img{
+        padding-left: 3rem;
+    }
+}

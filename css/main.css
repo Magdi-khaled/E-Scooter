@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@300&family=Libre+Baskerville:ital@1&family=Noto+Sans&family=Poppins&family=Ubuntu:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+::selection{
+    background-color: #e2e2e2;
+    color: #1e1e1e;
+}
+:root{
+    --color-1: #42454A;
+    --color-2: #17181A;
+    --color-3: #EAE8F3;
+    --color-4: #38413B;
+    --Ubuntu-font: 'Ubuntu', sans-serif;;
+}

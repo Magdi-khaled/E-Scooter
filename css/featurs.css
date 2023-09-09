@@ -1,0 +1,32 @@
+@import './main.css';
+
+.features{
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+.features div{
+    text-align: center;
+    width: 180px;
+    height: 10%;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 6px;
+    box-shadow: 1px 1px 5px var(--color-1);
+}
+.features div h1{
+    font-weight: bolder;
+    color: var(--color-1);
+}
+.features div h1 sub{
+    font-size: 1rem;
+    font-family:var(--Ubuntu-font);
+}
+.features div p{
+    font-size: small;
+}
+/* Media Part */
+@media screen and (max-width :1023px){
+    .features.justify-content-around{
+        justify-content: center !important;
+    }
+}

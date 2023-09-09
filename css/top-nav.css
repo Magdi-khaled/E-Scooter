@@ -1,0 +1,80 @@
+@import './main.css';
+nav{
+    min-height: 90px;
+}
+nav img{
+    cursor: pointer;
+    width : 69px;
+    height: 47px;
+}
+nav .navbar-nav{
+    padding-left: 36%;
+}
+nav ul li a,
+nav .register a{
+    color: var(--color-1);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+nav ul li a:hover,
+nav .register a:hover{
+    color: #000;
+    text-decoration: none;
+}
+nav .navbar-toggler{
+    position: relative;
+    border-color: var(--color-1);
+    color: var(--color-1);
+}
+nav .navbar-toggler::after{
+    font-family: "Font AweSome 5 Free";
+    font-weight: 900;
+    content: '\f0c9';
+    font-size: 25px;
+    position: absolute;
+    left: 30%;
+    bottom: 16%;
+}
+nav .register button{
+    border: none;
+    outline: none;
+    text-transform: uppercase;
+    padding: 15px 25px;
+    border-radius: 5px;
+    background-color: var(--color-1);
+    color: #fff;
+}
+nav .register button:hover{
+    cursor: pointer;
+    background-color: var(--color-4);
+}
+nav .dropdown-menu{
+    /* background: var(--color-3); */
+    border: 5px solid var(--color-1);
+    border-radius: 15px;
+}
+nav .dropdown-menu a{
+    text-transform: capitalize;
+    font-weight: bold;
+}
+nav .dropdown-menu a:hover{
+    background-color: var(--color-1);
+    color: #fff;
+}
+/* Media Part */
+@media (max-width:419px){
+    .px-5{
+        padding-left: 1rem !important;
+        padding-right: 2rem !important;
+    }
+}
+@media (max-width:820px){
+    nav .navbar-nav{
+        padding-left: 0;
+    }
+}
+@media (max-width:1185px){
+    nav .navbar-nav{
+        padding-left: 25%;
+    }
+}

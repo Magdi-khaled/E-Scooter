@@ -1,0 +1,37 @@
+@import './main.css';
+.gallery .header{
+    margin-bottom: 1rem;
+}
+.gallery .row .col-lg-6 div button{
+    width: 31rem;
+    margin: 15px;
+}
+.gallery .row .col-lg-6 img{
+    border-radius: 15%;
+}
+.gallery .row .scooter-img{
+    margin-top: 10rem;
+}
+/* Media Part */
+@media screen and (min-width :200px) and (max-width :600px) {
+    .gallery .row .col-lg-6.p-5{
+        padding: 1rem !important;
+    }
+    .gallery .row .col-lg-6 div button{
+        width: 20rem;
+        font-size: 1rem !important;
+        transition: all .5s ease-in-out;
+    }
+}
+@media screen and (min-width :600px) and (max-width :700px) {
+    .gallery .row .col-lg-6 div button{
+        width: 30rem;
+        font-size: 1.5rem !important;
+        transition: all .5s ease-in-out;
+    }
+}
+@media screen and (max-width :992px) {
+    .gallery .row .scooter-img{
+        margin-top: 0rem !important;
+    }
+}

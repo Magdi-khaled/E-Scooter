@@ -1,0 +1,6 @@
+@import './main.css';
+.colors{}
+.colors .header{
+    margin-top: -3rem;
+    margin-bottom: 5rem;
+}

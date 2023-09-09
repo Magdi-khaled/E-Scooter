@@ -1,0 +1,45 @@
+@import './main.css';
+.mul-modes .product-info{
+    margin-top: -2rem;
+}
+.mul-modes .product-info:nth-child(2){
+    margin-top: -7rem;
+}
+.mul-modes .shop-rack-img-1{
+    border-left: 3px solid #08d336;
+    border-bottom: 3px solid #08d336;
+    border-bottom-left-radius: 45%;
+    border-bottom-left-radius: 45%;
+}
+.mul-modes button,.gallery .row .col-lg-6 div button{
+    color: var(--color-1);
+    background-color: #fff;
+    border: 3px solid var(--color-1);
+    border-radius: 10px;
+    padding: 1.3rem 3rem;
+    font-weight: bold;
+    font-size: 1.6rem;
+    display: block;
+    margin: auto;
+    margin-bottom: 2rem;
+}
+.mul-modes button:hover,.gallery .row .col-lg-6 div button:hover{
+    cursor: pointer;
+    transform: scale(1.01);
+    transition: all .3s ease-in-out;
+}
+/* Media Part */
+@media screen and (max-width : 420px) {
+    .mul-modes .p-5{
+        padding: 1rem !important;
+    }
+    .mul-modes .product-info:nth-child(2){
+        margin-top: 1rem;
+    }
+}
+@media screen and (max-width : 500px) {
+    .mul-modes button{
+        font-size: 1rem !important;
+        transition: all .5s ease-in-out;
+    }
+}
