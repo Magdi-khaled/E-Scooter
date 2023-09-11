@@ -18,6 +18,9 @@
     <link rel="stylesheet" href="../css/multiple-modes.css">
     <link rel="stylesheet" href="../css/gallery.css">
     <link rel="stylesheet" href="../css/colors.css">
+    <link rel="stylesheet" href="../css/test-imonials.css">
+    <link rel="stylesheet" href="../css/new-sletter.css">
+    <link rel="stylesheet" href="../css/footer.css">
 
 </head>
 <body>
@@ -40,7 +43,7 @@
                     </div>
                 </li>
                 <li class="nav-item px-3"><a class="nav-link" href="#gallery">Gallery</a></li>
-                <li class="nav-item px-3"><a class="nav-link" href="">Contact</a></li>
+                <li class="nav-item px-3"><a class="nav-link" href="#contact">Contact</a></li>
             </ul>
         </div>
         <div class="d-flex align-items-center register">
@@ -52,8 +55,8 @@
     <!-- End Top Nav -->
 
     <!-- Preview -->
-    <section class="preview row">
-        <div data-aos="fade-right" class="col-lg-5 col-md-12 pre-txt pl-5">
+    <section data-aos="fade-down" class="preview row">
+        <div class="col-lg-5 col-md-12 pre-txt pl-5">
             <div>
                 <h1 class="display-1 fs-1 text-nowrap">Let's Ride</h1>
                 <h1 class="display-1 font-weight-bold text-nowrap">
@@ -64,15 +67,19 @@
             <h3 class="text-nowrap">Simple and sleek design with users <br> in mind.</h3>
             <div class="buy-now d-flex flex-nowrap align-items-center pr-1">
                 <button class="mr-3"></button>
-                <p class="font-weight-bold mr-3">Buy Now</p>
-                <p class="font-weight-bold mx-3">
+                <p class="font-weight-bold mr-3 text-nowrap">Buy Now</p>
+                <p class="font-weight-bold mx-3 text-nowrap">
                     Watch Our <br>
                     video how <br>
                     it works</p>
-                <img src="../images/play button.png" alt="video" title="Product-video">
+                <button id="video-btn">
+                    <img src="../images/play button.png" alt="video" title="Product-video">
+                </button>
+                <video hidden controls src="../videos/Trailer.mp4"></video>
+                
             </div>
         </div>
-        <div data-aos="fade-left" class="col-lg-7 col-md-12 pre-img">
+        <div class="col-lg-7 col-md-12 pre-img">
             <div id="carsoul-controls" class="carousel slide product-img" data-ride="carousel">
                 <div class="carousel-inner">  
                     <div class="carousel-item active">  
@@ -97,7 +104,7 @@
         </div>
     </section>
     <!-- End Preview -->
-    
+    <button id="up-btn"></button>
     <!-- Featurs -->
     <section data-aos="fade-up" class="features d-flex flex-wrap align-items-center justify-content-around">
         <div>
@@ -140,7 +147,7 @@
     <!-- Product Information-->
     <span id="product-info"></span>
     <section data-aos="fade-up" class="product-info">
-        <div class="header text-center">
+        <div class="header">
             <h1>Product Information</h1>
             <p>Our Scooter has following unique design and technology features:</p>
         </div>
@@ -180,7 +187,7 @@
 
     <!-- High Efficiency Motor -->
     <section data-aos="fade-up" class="high-motor">
-        <div class="header text-center">
+        <div class="header">
             <h1>High Efficiency Motor</h1>
             <p>More torque for powerful riding with 22% maximum hill climbing capability.</p>
         </div>
@@ -192,7 +199,7 @@
     <span id="golf-bag"></span>
     <section data-aos="fade-up" class="mul-modes">
         <section class="p-5 product-info">
-            <div class="header text-center">
+            <div class="header">
                 <p>There are multiple modes for the scooter for your multiple needs.</p>
             </div>
             <div class="row m-0 d-flex flex-wrap justify-content-evenly align-items-center">
@@ -259,7 +266,7 @@
 
     <!-- Gallery -->
     <section data-aos="fade-up" class="gallery">
-        <div class="header text-center">
+        <div class="header">
             <span id="gallery"></span>
             <h1>Gallery</h1>
             <p>View gallery of our products and make yourself satisfied with our creation.</p>
@@ -283,13 +290,138 @@
     
     <!-- Colors -->
     <section data-aos="fade-up" class="colors">
-        <div class="header text-center">
+        <div class="header">
             <h1>Colors</h1>
             <p>Checkout our products colors.</p>
+        </div>
+        <div class="main-col">
+            <img id="main-col" class="w-100" src="../images/img-11.png" alt="main-color">
+        </div>
+        <div class=" w-100 d-flex">
+            <img id="col-1" onclick="changeColor(this.src)" src="../images/img-12.png" alt="">
+            <img id="col-2" onclick="changeColor(this.src)" src="../images/img-13.png" alt="">
+            <img id="col-3" onclick="changeColor(this.src)" src="../images/img-14.png" alt="">
+            <img id="col-4" onclick="changeColor(this.src)" src="../images/img-15.png" alt="">
         </div>
     </section>
     <!-- End Colors -->
     
+    <!-- Testimonials -->
+    <section data-aos="fade-up" class="testimonials">
+        <div class="header">
+            <h1>Testimonials</h1>
+        </div>
+        <div class="feedback d-flex flex-wrap align-items-center">
+            <div>
+                <img src="../images/stars.png" alt="stars-feedback">
+                <p>
+                    On the other hand, we denounce <br>
+                    with righteous indignation and <br>
+                    dislike men who are so beguiled <br>
+                    and demoralized by the charms <br>
+                    of pleasure.
+                </p>
+                <div>
+                    <img src="../images/person-img-1.png" alt="">
+                    <div>
+                        <h6>Serhiy Hipskyy</h6>
+                        <p>CEO Universal</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img src="../images/stars.png" alt="stars-feedback">
+                <p>
+                    Nam libero tempore, cum soluta <br>
+                    nobis est eligendi optio cumque <br>
+                    nihil impedit quo minus id quod <br>
+                    maxime placeat facere  <br>
+                    possimus.
+                </p>
+                <div>
+                    <img src="../images/person-img-2.png" alt="">
+                    <div>
+                        <h6>Justus Menke</h6>
+                        <p>CEO Universal</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img src="../images/stars.png" alt="stars-feedback">
+                <p>
+                    At vero eos et accusamus et <br> 
+                    iusto odio dignissimos ducimus <br>
+                    qui blanditiis praesentium <br>
+                    voluptatum deleniti atque <br>
+                    corrupti quos dolores.
+                </p>
+                <div>
+                    <img src="../images/person-img-3.png" alt="">
+                    <div>
+                        <h6>Britain Eriksen</h6>
+                        <p>CEO Universal</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swapers">
+            <button class="prev"></button>
+            <button class="next"></button>
+        </div>
+    </section>
+    <!-- End Testimonials -->
+
+    <!-- New Sletter -->
+    <span id="contact"></span>
+    <section class="new-sletter">
+        <div class="header">
+            <h1>Subscribe To Newsletter</h1>
+            <p>Subscribe to our newsletter to get amazing offers in future.</p>
+        </div>
+        <div class="e-mail">
+            <input type="text" name="e-mail" placeholder="Enter your email...">
+            <button type="submit">Get Start</button>
+        </div>
+    </section>
+    <!-- End New Sletter -->
+
+    <!-- Footer -->
+    <span id="contact"></span>
+    <footer class="d-flex text-light">
+        <div class="foot-img">
+            <img class="w-100" src="../images/img-16.png" alt="">
+        </div>
+        <div class="contact">
+            <div>
+                <h5>About</h5>
+                <p><a href="#">Company</a></p>
+                <p><a href="#">Teams</a></p>
+                <p><a href="#">Profile</a></p> 
+                <p><a href="#">Careers</a></p>
+            </div>
+            <div>
+                <h5>Resources</h5>
+                <p><a href="#">Contact</a></p>
+                <p><a href="#">Application</a></p>
+                <p><a href="#" class="text-nowrap">FQA Features</a></p>
+                <!-- <p><a href="#">Features</a></p> -->
+            </div>
+            <div>
+                <h5>Legals</h5>
+                <p class="text-nowrap"><a href="#">Copyright Privacy</a></p>
+                <p class="text-nowrap"><a href="#">Policy Disclaimer</a></p>
+                <p><a href="#">Terms</a></p>
+                <div class="d-flex justify-content-between">
+                    <a href=""><img src="../images/facebook.png" alt=""></a>
+                    <a href=""><img src="../images/x.png" alt=""></a>
+                    <a href=""><img src="../images/instagramm.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+        <!-- <p class="text-light w-100">© Copyright 2021. All rights reserved.</p> -->
+    </footer>
+    <!-- End Footer -->
+
     <!-- Java Script links -->
     <script src="../js/E-Scooter.js"></script>
     <script src="../js/code.jquery.com_jquery-3.7.0.min.js"></script>
