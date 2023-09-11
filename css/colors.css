@@ -1,6 +1,75 @@
 @import './main.css';
-.colors{}
+.colors{
+    margin-bottom: 15rem !important;
+}
 .colors .header{
     margin-top: -3rem;
     margin-bottom: 5rem;
+}
+.colors > img{
+    height: 10% !important;
+}
+.colors .main-col{
+    width: 80%;
+    margin: auto;
+}
+.colors .main-col img{
+    border-radius: 15px;
+}
+.colors .d-flex {
+    position: absolute;
+    bottom: -23%;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 5rem;
+}
+.colors .d-flex img{
+    width: 17%;
+    border-radius: 15px;
+}
+.colors .d-flex img:hover{
+    transform: scale(1.01);
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+.colors .d-flex img#col-1:hover{
+    box-shadow: 0px 3px 10px 4px #3aaac4;
+}
+.colors .d-flex img#col-2:hover{
+    box-shadow: 0px 3px 10px 4px #50d78c;
+}
+.colors .d-flex img#col-3:hover{
+    box-shadow: 0px 3px 10px 4px #c41c1c;
+}
+.colors .d-flex img#col-4:hover{
+    box-shadow: 0px 3px 10px 4px #38413B;
+}
+
+/* Media Part */
+@media screen and (max-width :419px){
+    .colors .d-flex {
+        position: absolute;
+        bottom: -26%;
+    }
+}
+@media screen and (min-width:450px) and (max-width :975px){
+    .colors .d-flex {
+        position: absolute;
+        bottom: -26%;
+        justify-content: center;
+        margin-bottom: 5rem;
+    }
+    .colors .d-flex img{
+        margin: 8px;
+    }
+}
+/* Still has error design here */
+@media screen and (min-width : 815px){
+    .colors .main-col {
+        height: 40rem;
+    }
+    .colors .main-col img{
+        height: 85%;
+        width: 65%;
+    }
 }

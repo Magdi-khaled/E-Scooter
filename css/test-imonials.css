@@ -1,0 +1,84 @@
+@import './main.css';
+.testimonials{
+    margin-bottom: 5rem;
+}
+.testimonials .feedback{
+    justify-content: space-evenly;
+    margin: 3rem 6rem;
+}
+.testimonials .feedback > div{
+    box-shadow: 2px 2px 3px var(--color-1);
+    padding: 10px;
+    min-height: 20rem;
+    width: 330px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    border-radius: 5px;
+    margin: 8px;
+}
+.testimonials .feedback > div > img{
+    width: 30%;
+    margin: 15px 0;
+}
+.testimonials .feedback > div > p{
+    white-space: nowrap !important;
+    
+}
+.testimonials .feedback > div > div{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.testimonials .feedback > div > div img{
+    padding-right: 1rem;
+}
+.testimonials .feedback > div > div div{
+    margin-bottom:-5px ;
+}
+.testimonials .feedback > div > div h6{
+    margin-bottom: -5px;
+}
+.testimonials .feedback > div > div p{
+    font-size: small;
+}
+/* swap buttons */
+.testimonials .swapers{
+    width: 100px;
+    margin: auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.testimonials .swapers button{
+    font-weight: bold;
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid var(--color-1);
+    border-radius: 50%;
+    font-size: small;
+    cursor: pointer;
+}
+.testimonials .swapers button:hover{
+    color: #fff;
+    background-color: var(--color-1);
+    transition: all .3s ease-in-out;
+}
+.testimonials .swapers button::before {
+    font-family: "Font AweSome 5 Free";
+    font-weight: 900;
+}
+.testimonials .swapers button.prev::before{
+    content: '\f30a';
+}
+.testimonials .swapers button.next::before{
+    content: '\f30b';
+}
+/* Media Part */
+@media screen and (max-width : 768px) {}

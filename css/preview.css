@@ -11,12 +11,12 @@
     padding-top: 3rem;
     color: var(--color-1);
 }
-.preview .pre-txt>p {
+.preview .pre-txt > p {
     position: relative;
     padding-bottom: 2rem;
 }
 
-.preview .pre-txt>p::before {
+.preview .pre-txt > p::before {
     content: '';
     position: absolute;
     background-color: var(--color-1);
@@ -40,7 +40,7 @@
     margin-left: 25px;
 }
 
-.preview .pre-txt .buy-now button {
+.preview .pre-txt .buy-now button:first-child {
     border: none;
     outline: none;
     cursor: pointer;
@@ -49,17 +49,25 @@
     color: #fff;
 }
 
-.preview .pre-txt .buy-now button:hover {
+.preview .pre-txt .buy-now button:first-child:hover {
     background-color: var(--color-4);
     transition: all 0.3s ease-in-out;
 }
 
-.preview .pre-txt .buy-now button::before {
+.preview .pre-txt .buy-now button:first-child::before {
     font-family: "Font AweSome 5 Free";
     font-weight: 900;
     content: '\f30b';
 }
+.preview .pre-txt .buy-now button:nth-child(2){
+    border: none;
+}
 
+.preview .pre-txt .buy-now #video-btn{
+    border: none;
+    outline: none;
+    background: #fff;
+}
 .preview .pre-txt .buy-now img:hover {
     cursor: pointer;
     transform: scale(1, 1) rotate(-17deg);
@@ -155,7 +163,25 @@
     color: var(--color-1);
     font-family: cursive;
 }
-
+video{
+    margin: auto;
+    width: 75%;
+    border-radius: 20px;
+}
+.exit-btn-style{
+    border: none;
+    outline: none;
+    position: absolute;
+    background-color: var(--color-4);;
+    color: #000;
+    top: 5%;
+    right: 6%;
+    padding: 1rem;
+    border-radius: 20px;
+    width: 50px;
+    height: 60px;
+    font-weight: bold;
+}
 /* Media Part */
 @media screen and (max-width : 420px) {
     .preview .pre-img .controls+h1 {
@@ -185,6 +211,39 @@
     }
     .preview .pre-txt>p::before {
         width: 220px;
+    }
+}
+@media screen and (max-width : 702px){
+    video{
+        position: fixed;
+        top: 15%;
+        width: 86%;
+        left: 5%;
+        border-radius: 21px;
+    }
+}
+@media screen and (max-width : 895px) {
+    video{
+        position: fixed;
+        top: 30%;
+        width: 95%;
+        left: 3%;
+    }
+}
+@media screen and (min-width : 896px) and (max-width : 1290px) {
+    video{
+        position: fixed;
+        top: 10%;
+        width: 85%;
+        left: 3%;
+    }
+}
+@media screen and (min-width : 1293px){
+    video{
+        position: fixed;
+        top: 1%;
+        width: 81%;
+        left: 3%;
     }
 }
 @media screen and (max-width : 1220px) {

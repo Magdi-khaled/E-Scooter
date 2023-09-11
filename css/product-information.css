@@ -1,15 +1,4 @@
 @import './main.css';
-.product-info,.high-motor,.gallery,.colors{
-    margin-top: 10rem;
-    color: var(--color-1);
-}
-.product-info .header h1,.high-motor .header h1,.gallery .header h1,.colors .header h1{
-    font-weight: bold;
-}
-.product-info .header p,.high-motor .header p,.gallery .header p,.colors .header p{
-    padding-top: 1.5rem;
-    font-weight: bold;
-}
 .product-info .d-flex .info-info div{
     margin: 30px 0px;
     display: flex;

@@ -15,3 +15,38 @@
     --color-4: #38413B;
     --Ubuntu-font: 'Ubuntu', sans-serif;;
 }
+section{
+    margin-top: 10rem;
+    color: var(--color-1);
+}
+.header{
+    text-align: center;
+}
+.header h1{
+    font-weight: bold;
+}
+.header p{
+    padding-top: 1.5rem;
+    font-weight: bold;
+}
+#up-btn{
+    position: fixed;
+    border: none;
+    outline: none;
+    color: var(--color-4);
+    right: 0;
+    bottom: 0;
+    background-color: transparent;
+    z-index: 50;
+    display: none;
+}
+#up-btn::before{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: '\f35b';
+    font-size: 3rem;
+}
+#up-btn:hover{
+    color: #000000;
+    cursor: pointer;
+}

@@ -1,0 +1,54 @@
+@import './main.css';
+.new-sletter{
+    width: 100%;
+    margin-bottom: 5rem;
+}
+.new-sletter .header p{
+    margin-top: -1.5rem;
+    font-weight: 600 !important;
+}
+.new-sletter .e-mail{
+    margin: auto;
+    width: 90%;
+    text-align: center;
+}
+.new-sletter .e-mail input{
+    border: none;
+    background-color: #e2e2e2;
+    height: 4rem;
+    width: 20rem;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: medium;
+}
+.new-sletter .e-mail input:focus{
+    border: #000;
+}
+.new-sletter .e-mail button{
+    border: none;
+    outline: none;
+    background-color: var(--color-1);
+    width: 10rem;
+    color: #fff;
+    padding: 20px 30px;
+    border-radius: 10px;
+    white-space: nowrap !important;
+}
+.new-sletter .e-mail button:hover{
+    cursor: pointer;
+    background-color: #000;
+    transition: all .5s ease-in-out;
+}
+/* Media Part */
+@media screen and (max-width :556px){
+    .new-sletter .e-mail input{
+        width: 12rem;
+        padding: 10px;
+        border-radius: 10px;
+        font-size: medium;
+    }
+    .new-sletter .e-mail button{
+        padding: 18px 27px ;
+        width: 7rem;
+    }
+}
