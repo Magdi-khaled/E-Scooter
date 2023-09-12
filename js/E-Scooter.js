@@ -1,6 +1,64 @@
 let videoBtn = document.getElementById('video-btn');
 let upBtn = document.getElementById('up-btn');
 
+let previewImgs = document.querySelector('.carousel-inner');
+let previewSize = previewImgs.children.length;
+let prev = document.getElementById('prev');
+let next = document.getElementById('next');
+
+let feedPrev = document.getElementById('prev-feed');
+let feedNext = document.getElementById('next-feed');
+let feedbacks = document.querySelector('.feedback');
+let feedSize = feedbacks.children.length;
+
+let color = 'white';
+
+// Change Preview Image Function
+function changePreviewImage(){
+    for(let i = 0 ; i < previewSize ;i++)
+        if (previewImgs.children[i].classList.contains('active')){
+            document.getElementById('no-Product-view').innerHTML = "0"+(i+1);
+        }
+}
+next.addEventListener('click', changePreviewImage);
+prev.addEventListener('click', changePreviewImage);
+
+//  Feedback Buttons Function
+feedPrev.addEventListener('click',function(){
+    if( feedbacks.children[0].classList.contains('feed-active')){
+        feedPrev.disabled = true;
+        feedNext.disabled = false;
+        feedPrev.pointerEvents = 'none';
+        feedNext.pointerEvents = 'auto';
+    }
+    else{
+        for(let i = 2 ; i > 0; i--){
+            if(feedbacks.children[i].classList.contains('feed-active')){
+                feedbacks.children[i].classList.remove('feed-active');
+                feedbacks.children[i-1].classList.add('feed-active');
+                break;
+            }
+        };
+    }
+})
+feedNext.addEventListener('click',function(){
+    if( feedbacks.children[2].classList.contains('feed-active')){
+        feedNext.disabled = true;
+        feedNext.style.pointerEvents = 'none';
+        feedPrev.disabled = false;
+        feedPrev.pointerEvents = 'auto';
+    }
+    else{
+        for(let i = 0 ; i < 2 ; i++){
+            if (feedbacks.children[i].classList.contains('feed-active')){
+                feedbacks.children[i].classList.remove('feed-active');
+                feedbacks.children[i+1].classList.add('feed-active');
+                break;
+            }
+        };
+    }
+})
+
 // Show Video Trailer Function
 videoBtn.onclick = function(){
     // Get The Modal Element
@@ -50,11 +108,32 @@ videoBtn.onclick = function(){
     document.body.style.overflow = 'hidden';
     document.body.appendChild(modal);
 }
+
 // Change Motor Colors Function
-function changeColor(src) {
+function changeColor(id) {
     let mainCol = document.getElementById('main-col');
-    mainCol.src = src;
+    if(id === 1){
+        mainCol.src = '../images/img-color-1.png';
+        color = 'baby-blue';
+    }
+    else if(id === 2){
+        mainCol.src = '../images/img-color-2.png';
+        color = 'green';
+    }
+    else if(id === 3){
+        mainCol.src = '../images/img-color-3.png';
+        color = 'red';
+    }
+    else if(id === 4){
+        mainCol.src = '../images/img-color-4.png';
+        color = 'black';
+    }
+    else{
+        mainCol.src = '../images/img-11.png';
+        color = 'white';
+    }
 }
+
 // Hide Up btn or show
 window.onscroll = function(){
     if(window.scrollY > 400)
@@ -62,9 +141,12 @@ window.onscroll = function(){
     else
         upBtn.style.display = 'none';
 }
+
 // Back Top Function
 upBtn.addEventListener('click',function(){
     window.scrollTo({
         top: 0, behavior:'smooth',
     });
 })
+
+////////////
