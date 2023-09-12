@@ -38,6 +38,11 @@ footer .contact > div .d-flex{
     width:120px;
 }
 /* Media Part */
+@media screen and (min-width :410px) and (max-width:571px){
+    footer .contact {
+        width: 90%;
+    }
+}
 @media screen and (max-width :572px){
     footer{
         min-height: 350px;
@@ -56,7 +61,10 @@ footer .contact > div .d-flex{
         display: none;
     }
     footer .contact{
-        width: 90%;
+        width: 100%;
         justify-content: center;
+    }
+    footer .contact div{
+        width: 20%;
     }
 }

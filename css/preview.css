@@ -1,7 +1,9 @@
 @import './main.css';
 
-.display-1 {
-    font-size: 6.5rem !important;
+.preview .display-1 {
+    font-size: 7.5rem !important;
+    margin-top: -35px;
+    text-transform: uppercase;
 }
 .preview.row{
     margin: 0;
@@ -13,7 +15,10 @@
 }
 .preview .pre-txt > p {
     position: relative;
-    padding-bottom: 2rem;
+    padding-bottom: 5rem;
+}
+.preview .pre-txt h3{
+    padding-top: 4rem;
 }
 
 .preview .pre-txt > p::before {
@@ -84,7 +89,7 @@
 }
 
 .preview .pre-img .product-img::before {
-    content: '';
+    content: 'arr';
     position: absolute;
     border-radius: 50%;
     background-color: var(--color-4);
@@ -254,5 +259,10 @@ video{
 @media screen and (min-width:990px) and (max-width : 1085px){
     .preview .pre-img .product-img img{
         padding-left: 3rem;
+    }
+}
+@media screen and (max-width : 1360px){
+    .preview .display-1 {
+        font-size: 6.5rem !important;
     }
 }
