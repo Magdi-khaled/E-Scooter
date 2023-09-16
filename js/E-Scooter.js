@@ -11,52 +11,72 @@ let feedNext = document.getElementById('next-feed');
 let feedbacks = document.querySelector('.feedback');
 let feedSize = feedbacks.children.length;
 
-let color = 'white';
+let h1Val = document.getElementById('no-Product-view');
+let currentActive = feedbacks.children[Math.floor(feedSize/2)];
+feedbacks.children[Math.floor(feedSize/2)].classList.add('feed-active');
+let prevActive = null;
 
+
+////////////// Functions //////////////
 // Change Preview Image Function
-function changePreviewImage(){
-    for(let i = 0 ; i < previewSize ;i++)
-        if (previewImgs.children[i].classList.contains('active')){
-            document.getElementById('no-Product-view').innerHTML = "0"+(i+1);
-        }
-}
-next.addEventListener('click', changePreviewImage);
-prev.addEventListener('click', changePreviewImage);
+next.addEventListener('click', function(){
+    if(h1Val.innerHTML === "01") h1Val.innerHTML = "02";
+    else if(h1Val.innerHTML === "02") h1Val.innerHTML = "03";
+    else h1Val.innerHTML = "01";
+});
+prev.addEventListener('click', function(){
+    if(h1Val.innerHTML === "01") h1Val.innerHTML = "03";
+    else if(h1Val.innerHTML ==="02") h1Val.innerHTML = "01";
+    else h1Val.innerHTML = "02";
+});
 
 //  Feedback Buttons Function
+function changeContent(prev,curr){
+    let tmp = prev.innerHTML;
+    prev.innerHTML = curr.innerHTML;
+    curr.innerHTML = tmp;
+    curr.classList.remove('feed-active');
+    prev.classList.add('feed-active');
+}
 feedPrev.addEventListener('click',function(){
+    feedNext.disabled = false;
+    feedNext.pointerEvents = 'auto';
     if( feedbacks.children[0].classList.contains('feed-active')){
         feedPrev.disabled = true;
-        feedNext.disabled = false;
         feedPrev.pointerEvents = 'none';
-        feedNext.pointerEvents = 'auto';
     }
     else{
-        for(let i = 2 ; i > 0; i--){
+        for(let i = feedSize-1 ; i > 0; i--){
             if(feedbacks.children[i].classList.contains('feed-active')){
                 feedbacks.children[i].classList.remove('feed-active');
                 feedbacks.children[i-1].classList.add('feed-active');
+                prevActive = feedbacks.children[i];
+                currentActive = feedbacks.children[i-1];
                 break;
             }
         };
     }
+    changeContent(prevActive,currentActive);
 })
 feedNext.addEventListener('click',function(){
-    if( feedbacks.children[2].classList.contains('feed-active')){
+    feedPrev.disabled = false;
+    feedPrev.pointerEvents = 'auto';
+    if( feedbacks.children[feedSize-1].classList.contains('feed-active')){
         feedNext.disabled = true;
-        feedNext.style.pointerEvents = 'none';
-        feedPrev.disabled = false;
-        feedPrev.pointerEvents = 'auto';
+        feedNext.pointerEvents = 'none';
     }
     else{
-        for(let i = 0 ; i < 2 ; i++){
+        for(let i = 0 ; i < feedSize ; i++){
             if (feedbacks.children[i].classList.contains('feed-active')){
                 feedbacks.children[i].classList.remove('feed-active');
                 feedbacks.children[i+1].classList.add('feed-active');
+                prevActive = feedbacks.children[i];
+                currentActive = feedbacks.children[i+1];
                 break;
             }
         };
     }
+    changeContent(prevActive,currentActive);
 })
 
 // Show Video Trailer Function
@@ -112,26 +132,16 @@ videoBtn.onclick = function(){
 // Change Motor Colors Function
 function changeColor(id) {
     let mainCol = document.getElementById('main-col');
-    if(id === 1){
+    if(id === 1)
         mainCol.src = '../images/img-color-1.png';
-        color = 'baby-blue';
-    }
-    else if(id === 2){
+    else if(id === 2)
         mainCol.src = '../images/img-color-2.png';
-        color = 'green';
-    }
-    else if(id === 3){
+    else if(id === 3)
         mainCol.src = '../images/img-color-3.png';
-        color = 'red';
-    }
-    else if(id === 4){
+    else if(id === 4)
         mainCol.src = '../images/img-color-4.png';
-        color = 'black';
-    }
-    else{
+    else
         mainCol.src = '../images/img-11.png';
-        color = 'white';
-    }
 }
 
 // Hide Up btn or show
@@ -149,4 +159,4 @@ upBtn.addEventListener('click',function(){
     });
 })
 
-////////////
+/////END Functionalities/////
