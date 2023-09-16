@@ -209,6 +209,10 @@ video{
     .preview .pre-img .product-img img {
         height: 30rem !important;
     }
+    
+    .preview .display-1 {
+        margin-top: -10px;
+    }
 }
 @media screen and (max-width : 620px) {
     .preview .pre-txt .text-nowrap {

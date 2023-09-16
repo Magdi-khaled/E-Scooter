@@ -55,6 +55,12 @@ footer .contact > div .d-flex{
         justify-content: space-evenly;
         margin-top: 5rem;
     }
+    footer .contact > p{
+        text-align: center;
+    }
+    footer .contact > div .d-flex{
+        width:110px;
+    }
 }
 @media screen and (min-width :580px) and (max-width :1300px){
     footer .foot-img{
@@ -66,5 +72,8 @@ footer .contact > div .d-flex{
     }
     footer .contact div{
         width: 20%;
+    }
+    footer .contact > p{
+        text-align: center;
     }
 }

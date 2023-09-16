@@ -4,12 +4,17 @@
 }
 .testimonials .feedback{
     justify-content: space-evenly;
-    margin: 3rem 6rem;
+    margin: 3rem 3rem;
+    min-height: 23rem;
+    overflow: hidden;
+    transition: all .5s ease-in-out;
 }
 .testimonials .feedback .feed-active{
     opacity: 1;
     background-color: #fff;
     font-weight: bold;
+    transform: scaleY(1.1);
+    transition: all .5s ease-in-out;
 }
 .testimonials .feedback > div{
     background: #e2e2e2;
@@ -25,6 +30,7 @@
     align-items: center;
     border-radius: 5px;
     margin: 8px;
+    cursor: pointer;
 }
 .testimonials .feedback > div > img{
     width: 30%;
@@ -32,7 +38,7 @@
 }
 .testimonials .feedback > div > p{
     white-space: nowrap !important;
-    
+    text-align: start;
 }
 .testimonials .feedback > div > div{
     padding-top: 2rem;
@@ -45,6 +51,8 @@
 }
 .testimonials .feedback > div > div img{
     padding-right: 1rem;
+    width: 55px;
+    border-radius:50%;
 }
 .testimonials .feedback > div > div div{
     margin-bottom:-5px ;
