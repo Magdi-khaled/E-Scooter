@@ -301,9 +301,10 @@
             <p>Checkout our products colors.</p>
         </div>
         <div  class="main-col">
-            <img id="main-col" onclick="changeColor(0)" class="w-100" src="../images/img-11.png" alt="main-color">
+            <img id="main-col" onclick="changeColor(0)" class="w-100" 
+                src="../images/img-11.png" alt="main-color">
         </div>
-        <div class=" w-100 d-flex">
+        <div class="w-100 d-flex">
             <img id="col-1" onclick="changeColor(1)" src="../images/img-12.png" alt="">
             <img id="col-2" onclick="changeColor(2)" src="../images/img-13.png" alt="">
             <img id="col-3" onclick="changeColor(3)" src="../images/img-14.png" alt="">
@@ -317,25 +318,8 @@
         <div class="header">
             <h1>Testimonials</h1>
         </div>
-        <div class="feedback d-flex flex-wrap align-items-center">
+        <div class="feedback d-flex align-items-center over-flow-scroll">
             <div id="feed-1">
-                <img src="../images/stars.png" alt="stars-feedback">
-                <p>
-                    On the other hand, we denounce <br>
-                    with righteous indignation and <br>
-                    dislike men who are so beguiled <br>
-                    and demoralized by the charms <br>
-                    of pleasure.
-                </p>
-                <div>
-                    <img src="../images/person-img-1.png" alt="">
-                    <div>
-                        <h6>Serhiy Hipskyy</h6>
-                        <p>CEO Universal</p>
-                    </div>
-                </div>
-            </div>
-            <div id="feed-2" class="feed-active">
                 <img src="../images/stars.png" alt="stars-feedback">
                 <p>
                     Nam libero tempore, cum soluta <br>
@@ -352,6 +336,23 @@
                     </div>
                 </div>
             </div>
+            <div id="feed-2">
+                <img src="../images/stars.png" alt="stars-feedback">
+                <p>
+                    Nam libero tempore, cum soluta <br>
+                    nobis est eligendi optio cumque <br>
+                    dislike men who are so beguiled <br>
+                    voluptatum deleniti atque <br>
+                    corrupti quos dolores.
+                </p>
+                <div class="flex-nowrap">
+                    <img src="../images/person-img-4.jpg" alt="">
+                    <div>
+                        <h6>Magdi Khaled</h6>
+                        <p class="text-nowrap">Software Engineer/Web Developer</p>
+                    </div>
+                </div>
+            </div>
             <div id="feed-3">
                 <img src="../images/stars.png" alt="stars-feedback">
                 <p>
@@ -362,7 +363,7 @@
                     corrupti quos dolores.
                 </p>
                 <div>
-                    <img src="../images/person-img-3.png" alt="">
+                    <img src="../images/person-img-3.jpg" alt="">
                     <div>
                         <h6>Britain Eriksen</h6>
                         <p>CEO Universal</p>
@@ -409,13 +410,12 @@
                 <h5>Resources</h5>
                 <p><a href="#">Contact</a></p>
                 <p><a href="#">Application</a></p>
-                <p><a href="#" class="text-nowrap">FQA Features</a></p>
-                <!-- <p><a href="#">Features</a></p> -->
+                <p><a href="#">FQA Features</a></p>
             </div>
             <div>
                 <h5>Legals</h5>
-                <p class="text-nowrap"><a href="#">Copyright Privacy</a></p>
-                <p class="text-nowrap"><a href="#">Policy Disclaimer</a></p>
+                <p><a href="#">Copyright Privacy</a></p>
+                <p><a href="#">Policy Disclaimer</a></p>
                 <p><a href="#">Terms</a></p>
                 <div class="d-flex justify-content-between">
                     <a href=""><img src="../images/facebook.png" alt=""></a>
@@ -423,8 +423,9 @@
                     <a href=""><img src="../images/instagramm.png" alt=""></a>
                 </div>
             </div>
+            <p class="text-light w-100">
+                © Copyright 2021. All rights reserved.</p>
         </div>
-        <!-- <p class="text-light w-100">© Copyright 2021. All rights reserved.</p> -->
     </footer>
     <!-- End Footer -->
 
