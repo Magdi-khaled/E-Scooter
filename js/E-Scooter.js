@@ -56,7 +56,7 @@ feedPrev.addEventListener('click',function(){
             }
         };
     }
-    changeContent(prevActive,currentActive);
+    // changeContent(prevActive,currentActive);
 })
 feedNext.addEventListener('click',function(){
     feedPrev.disabled = false;
@@ -76,7 +76,7 @@ feedNext.addEventListener('click',function(){
             }
         };
     }
-    changeContent(prevActive,currentActive);
+    // changeContent(prevActive,currentActive);
 })
 
 // Show Video Trailer Function
