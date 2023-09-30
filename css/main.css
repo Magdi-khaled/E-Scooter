@@ -15,7 +15,7 @@
     --color-4: #38413B;
     --Ubuntu-font: 'Ubuntu', sans-serif;;
 }
-section{
+section:not(.mul-modes){
     margin-top: 10rem;
     color: var(--color-1);
 }
