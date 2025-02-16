@@ -1,5 +1,6 @@
 {
-  "redirects": [
-    { "source": "/", "destination": "/Master.html", "permanent": true }
-  ]
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/html/index.html" }
+  ],
+  "cleanUrls": true
 }
